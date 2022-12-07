@@ -23,8 +23,6 @@ using namespace std;
 using namespace sf;
 
 
-
-
 // used to map latitude and longitude to the map used
 pair<double, double> plotCoords(double lat, double lon, unsigned int width, unsigned int height) {
     pair<double, double> coords;
