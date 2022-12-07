@@ -375,7 +375,6 @@ int main()
                         heapButtonClicked = true;
                         heapButton.setFillColor(Color(149, 192, 150));
                         hashButton.setFillColor(Color(179, 243, 186));
-                        cout << "here" << endl;
                         window.draw(hashButton);
                         window.draw(heapButton);
 
@@ -402,8 +401,8 @@ int main()
 
                         // get report info
                         distanceText.setString("Distance to UFO: " + to_string(distance) + " km");
-                        ufoLatText.setString("Latitude: " + to_string(latitude) + "°");
-                        ufoLongText.setString("Longitude: " + to_string(longitude) + "°");
+                        ufoLatText.setString("Latitude: " + to_string(latitude) + "Â°");
+                        ufoLongText.setString("Longitude: " + to_string(longitude) + "Â°");
                         cityText.setString("City: " + heap.peak_top().city);
                         stateText.setString("State: " + heap.peak_top().state);
                         countryText.setString("Country: " + heap.peak_top().country);
@@ -414,7 +413,6 @@ int main()
                         std::chrono::duration<double> heap_elapsed_seconds = heapEnd - heapStart;
                         heapTime = heap_elapsed_seconds.count();
                         heapTime = ceil(heapTime * 1000.0) / 1000.0;
-                        cout << "heap time: " << heapTime << endl;
                         // to here
 
                         
@@ -452,8 +450,8 @@ int main()
 
                         // get report info
                         distanceText.setString("Distance to UFO: " + to_string(distance) + " km");
-                        ufoLatText.setString("Latitude: " + to_string(latitude) + "°");
-                        ufoLongText.setString("Longitude: " + to_string(longitude) + "°");
+                        ufoLatText.setString("Latitude: " + to_string(latitude) + "Â°");
+                        ufoLongText.setString("Longitude: " + to_string(longitude) + "Â°");
                         cityText.setString("City: " + hashTable.closestLocation().city);
                         stateText.setString("State: " + hashTable.closestLocation().state);
                         countryText.setString("Country: " + hashTable.closestLocation().country);
@@ -464,8 +462,6 @@ int main()
                         std::chrono::duration<double> hash_elapsed_seconds = hashEnd - hashStart;
                         hashTime = hash_elapsed_seconds.count();
                         hashTime = ceil(hashTime * 1000.0) / 1000.0;
-                        cout << "hash table time: " << hashTime << endl;
-
 
                         // get report info
                         /*
